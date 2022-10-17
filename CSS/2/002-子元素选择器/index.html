@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>子元素选择器</title>
+		<style>
+		/* 	div strong {
+				color: red; 
+			} */
+			div > strong {
+				color: pink;
+			}		
+		</style>
+	</head>
+	<body>
+		<div>
+			<strong>儿子</strong>
+			<strong>儿子</strong>
+			<strong>儿子</strong>
+		</div>
+		<div>
+			<p>
+				<strong>孙子</strong>
+				<strong>孙子</strong>
+				<strong>孙子</strong>
+			</p>
+		</div>
+	</body>
+</html>
