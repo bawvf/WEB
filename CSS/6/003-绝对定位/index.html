@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>绝对定位</title>
+		<style>
+			.yeye {
+				width: 500px;
+				height: 500px;
+				position: relative;
+				background-color: green;
+			}
+			.father {
+				width: 350px;
+				height: 350px;
+				margin: 100px;
+				/* 标准流的盒子移动总是以父亲为准 */
+				background-color: pink;
+				/* position: relative; */
+			}
+			.son {
+				width: 200px;
+				height: 200px;
+				/* margin-left: 100px; */
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				/* 如果父亲贺盒子没有定位，以文档为准浏览器移动位置 */
+				background-color: blue;
+				/* 如果父亲贺盒子有定位，以父亲为准移动位置 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="yeye">
+			<div class="father">
+				<div class="son"></div>
+			</div>
+		</div>
+	</body>
+</html>

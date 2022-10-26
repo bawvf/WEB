@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-淘宝</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+			}
+			.taobao {
+				position: relative;
+				width: 520px;
+				height: 280px;
+				margin: 100px auto;
+				background-color: pink;
+			}
+			.arrow-l,.arrow-r {
+				/* 只能用定位来做，才能压住盒子 */
+				/* 不占用位置，随便移动位置 绝对定位 */
+				position: absolute;
+				top: 50%;
+				margin-top: -15px;
+				width: 20px;
+				height: 30px;
+				background:rgba(0, 0, 0, .2);
+				text-decoration: none;
+				color: #fff;
+				/* text-align: center; */
+				line-height: 30px;
+				
+			}
+			.arrow-l {
+				left: 0;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+			.arrow-r {
+				/* 只能用定位来做，才能压住盒子 */
+				/* 不占用位置，随便移动位置 绝对定位 */
+				right: 0;
+				border-top-left-radius: 15px;
+				border-bottom-left-radius: 15px;
+			}
+			.arrow-l:hover,.arrow-r:hover {
+				background: rgba(0, 0, 0, .4);
+			}
+			
+			.circle {
+				position: absolute;
+				left: 50%;
+				margin-left: -35px;
+				bottom: 15px;
+				width: 70px;
+				height: 13px;
+				background: rgba(255, 2555, 255, .3);
+				border-radius: 7px;
+			}
+			.circle li {
+				width: 8px;
+				height: 8px;
+				float: left;
+				border-radius: 50%;
+				margin: 3px;
+				background-color: #fff;
+			}
+			/* 注意优先级的问题 */
+			.circle .current {
+				background-color: #ff5000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="taobao">
+			<!-- 左按钮 -->
+			<a href="#" class="arrow-l"> &lt; </a>
+			
+			<!-- 右按钮 -->
+			<a href="#" class="arrow-r"> &gt; </a>
+			<!-- 图片 -->
+			<img src="img/taobao.jpg"/>
+			
+			<!-- 小圆点 -->
+			<ul class="circle">
+				<li></li>
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-新浪广告</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.box {
+				width: 1002px;
+				margin: 0 auto;
+				margin-top: 44px;
+			}
+			.ad-l {
+				position: fixed;
+				top: 100px;
+				left: 0;
+			}
+			.ad-r {
+				position: fixed;
+				top: 100px;
+				right: 0;
+			}
+			
+			.top {
+				width: 100%;
+				position: fixed;
+				top: 0;
+				height: 44px;
+				background-color: pink;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<img src="img/top.png"/>
+		</div>
+		<!-- 左右的固定定位 -->
+		<img class="ad-l" src="img/ad-l.png"/>
+		<img class="ad-r" src="img/ad-r.png"/>
+		<div class="box">
+			<img src="img/box.png"/>
+		</div>
+	</body>
+</html>
