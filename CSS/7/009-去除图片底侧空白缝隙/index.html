@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>去除图片底侧空白缝隙</title>
+		<style>
+			div {
+				border: 1px solid red;
+			}
+			div img {
+				/* 因为默认的是基线对齐，所有底侧有空白缝隙 */
+				/* vertical-align: baseline; */
+				/* vertical-align: bottom; */
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/3.jpg"/>
+		</div>
+	</body>
+</html>

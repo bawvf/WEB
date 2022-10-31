@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>overflow溢出</title>
+		<style>
+			div {
+				/* 超出隐藏--超出盒子大小的部分隐藏起来 */
+				overflow: hidden;
+				/* 总是显示滚动条 不会超出盒子大小 内容能显示全 */
+				overflow: scroll;
+				/* 不总是显示滚动条 不会超出盒子大小 内容能显示全 */
+				overflow: auto;
+				width: 150px;
+				height: 150px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+			中华人民共和国
+		</div>
+	</body>
+</html>
