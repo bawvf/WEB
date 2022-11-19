@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3-动画曲线步长</title>
+		<style>
+			div {
+				overflow: hidden;
+				white-space: normal;
+				font-size: 20px;
+				width: 0;
+				height: 30px;
+				background-color: pink;
+				animation: w 4s steps(10) forwards;
+			}
+			@keyframes w {
+				0% {
+					width: 0;
+				}
+				100% {
+					width: 200px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>明天更好我在这里等你</div>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-三角形</title>
+		<style>
+			div {
+				position: relative;
+				width: 249px;
+				height: 35px;
+				border: 1px solid #000;
+			}
+			div::after {
+				content: "";
+				position: absolute;
+				top: 8px;
+				right: 15px;
+				width: 10px;
+				height: 10px;
+				border-bottom: 1px solid #000;
+				border-right: 1px solid #000;
+				transform: rotate(45deg);
+			}
+			div:hover::after {
+				transform: rotate(225deg);
+				transition: all 0.5s;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

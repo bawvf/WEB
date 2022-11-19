@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3-动画属性</title>
+		<style>
+			@keyframes move {
+				0% {
+					transform: translate(0,0);
+				}
+				100% {
+					transform: translate(1000px,0);
+				}
+			}
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				animation: move 2s linear 0s 1 alternate forwards;
+			}
+			div:hover {
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

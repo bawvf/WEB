@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3-动画的基本使用</title>
+		<style>
+			@keyframes move {
+/* 				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(1000px,0);
+				} */
+				0% {
+					transform: translate(0,0);
+				}
+				25% {
+					transform: translate(1000px,0);
+				}
+				50% {
+					transform: translate(1000px,1000px);
+				}
+				75% {
+					transform: translate(0,1000px);
+				}
+				100% {
+					transform: translate(0,0);
+				}
+			}
+			/* 动画序列 */
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				animation-name: move;
+				animation-duration: 3.5s;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
