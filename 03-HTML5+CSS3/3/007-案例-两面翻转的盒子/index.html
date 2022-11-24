@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-两面翻转的盒子</title>
+		<style>
+			body {
+				perspective: 500px;
+			}
+			.box {
+				position: relative;
+				width: 300px;
+				height: 300px;
+				margin: 100px auto;
+				transition: all 1s;
+				/* 保留立体空间 */
+				transform-style: preserve-3d;
+			}
+			.box:hover {
+				transform: rotateY(180deg);
+			}
+			.front,.back {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				font-size: 30px;
+				line-height: 300px;
+				text-align: center;
+				color: #fff;
+			}
+			.front {
+				background-color: pink;
+				z-index: 1;
+			}
+			.back {
+				background-color: purple;
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="front">四九年入国军</div>
+			<div class="back">我在这里等你</div>
+		</div>
+	</body>
+</html>

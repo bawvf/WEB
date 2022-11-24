@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-3D导航栏</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			ul {
+				margin: 100px;
+			}
+			ul li {
+				width: 120px;
+				height: 35px;
+				perspective: 500px;
+			}
+			.box {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				transform-style: preserve-3d;
+				
+				transition: all 1s; 
+			}
+			.box:hover {
+				transform: rotateX(90deg);
+				
+			}
+			.front,.bottom {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				text-align: center;
+				line-height: 35px;
+			}
+			.front {
+				background-color: pink;
+				z-index: 1;
+				transform: translateZ(17.5px);
+			}
+			.bottom {
+				background-color: purple;
+				/* 有移动和其他样式，先写移动 */
+				transform: translateY(50%) rotateX(-90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div class="box">
+					<div class="front">我在干什么</div>
+					<div class="bottom">我不知道</div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
