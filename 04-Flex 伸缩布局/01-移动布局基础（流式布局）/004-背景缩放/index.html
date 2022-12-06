@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,
+		maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>背景缩放</title>
+		<style>
+			div {
+				width: 500px;
+				height: 500px;
+				border: 2px solid red;
+				background: url(img/dog.jpg) no-repeat;
+				/* 宽为500px 高等比缩放 */
+				/* background-size: 500px; */
+				/* 背景全覆盖 */
+				background-size: cover;
+				/* 高度和宽度等比例拉伸 */
+				background-size: contain;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
