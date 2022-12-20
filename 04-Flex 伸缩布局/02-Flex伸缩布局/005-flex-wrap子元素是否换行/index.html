@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>flex-wrap子元素是否换行</title>
+		<style>
+			div {
+				display: flex;
+				width: 600px;
+				height: 400px;
+				background-color: pink;
+				/* flex布局中，默认的子元素是不换行的，如果装不开，会缩小子元素的宽度，放到父元素里面 */
+				flex-wrap: wrap;
+			}
+			
+			div span {
+				width: 150px;
+				height: 100px;
+				background-color: purple;
+				color: #fff;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>flex设置主轴上的子元素排列方式1</title>
+		<style>
+			div {
+				display: flex;
+				width: 800px;
+				height: 300px;
+				background-color: pink;
+				/* 默认主轴是x轴 row */
+				flex-direction: row;
+				/* 设置主轴上子元素的排列方式 */
+				justify-content: flex-start;
+				/* 平分剩余空间 */
+				justify-content: space-around;
+				/* 先两边贴边，在分配剩余的空间 */
+				justify-content: space-between;
+			}
+			div span {
+				width: 150px;
+				height: 100px;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+		</div>
+	</body>
+</html>
