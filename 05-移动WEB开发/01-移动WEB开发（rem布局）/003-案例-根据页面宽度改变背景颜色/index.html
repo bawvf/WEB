@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-根据页面宽度改变背景颜色</title>
+		<style>
+			/* 小于540px,页面的背景颜色变为蓝色 */
+			@media screen and (max-width:539px) {
+				body {
+					background-color: blue;
+				}
+			}
+			/* 540-970页面颜色改为绿色 */
+			@media screen and (min-width:540px) and (max-width:969px) {
+				body {
+					background-color: green;
+				}
+			}
+			/* 大于等于970页面颜色改为红色 */
+			@media screen and (min-width:970px) {
+				body {
+					background-color: red;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>

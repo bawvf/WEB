@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>案例-媒体查询+rem实现元素变化</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			@media screen and (min-width:320px) {
+				html {
+					font-size: 50px;
+				}
+			}
+			@media screen and (min-width:640px) {
+				html {
+					font-size: 100px;
+				}
+			}
+			.top {
+				height: 1rem;
+				font-size: .5rem;
+				background-color: green;
+				color: #fff;
+				text-align: center;
+				line-height: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">购物车</div>
+	</body>
+</html>
