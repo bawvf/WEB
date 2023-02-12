@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>010-案例-输出当前年份2月份的天数</title>
+		<script>
+			function backDay() {
+				var year = prompt('请输入年份：');
+				if(isRunYear(year)) {
+					alert('当前年份是闰年2月份有29天');
+				} else {
+					alert('当前年份是闰年2月份有28天');
+				}
+			}
+			backDay();
+			function isRunYear(year) {
+				var flag = false;
+				if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+					flag = true;
+				}
+				return flag;
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
