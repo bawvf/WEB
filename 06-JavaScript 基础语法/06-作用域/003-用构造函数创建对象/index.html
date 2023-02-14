@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>003-用构造函数创建对象</title>
+		<script>
+			function Star(uname,age,sex) {
+				this.uname = uname;
+				this.age = age;
+				this.sex = sex;
+				this.sing = function(sang) {
+					console.log(sang);
+				}
+			}
+			
+			var ldh = new Star('刘德华',18,'男');
+			console.log(ldh.uname);
+			console.log(ldh.age);
+			console.log(ldh.sex);
+			ldh.sing('冰雨');
+			
+			var zxy = new Star('张学友',21,'男');
+			console.log(zxy.uname);
+			console.log(zxy.age);
+			console.log(zxy.sex);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

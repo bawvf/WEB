@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>009-案例-查找字符串中某个字符出现的次数</title>
+		<script>
+			var str = "abcoefoxyozzopp";
+			var index = str.indexOf('o');
+			var num = 0;
+			
+			console.log(index);
+			while (index != -1) {
+				console.log(index);
+				num++;
+				index = str.indexOf('o', index + 1);
+			}
+			
+			console.log(num);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
