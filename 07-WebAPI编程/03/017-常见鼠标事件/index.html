@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>017-常见鼠标事件</title>
+	</head>
+	<body>
+		我是一段不愿意。。。。
+	</body>
+	<script>
+		// 1.禁用右键菜单
+		document.addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+		})
+		
+		// 2.禁止选中文字
+		document.addEventListener('selectstart', function(e) {
+			e.preventDefault();
+		})
+	</script>
+</html>

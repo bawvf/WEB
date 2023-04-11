@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>019-案例-跟随鼠标</title>
+		<style>
+			img {
+				position: absolute;
+				top: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/angel.gif"/>
+		
+		<script>
+			var pic = document.querySelector('img');
+			
+			document.addEventListener('mousemove', function(e) {
+				var x = e.pageX;
+				var y = e.pageY;
+				
+				pic.style.left = x + 'px';
+				pic.style.top = y + 'px';
+			})
+		</script>
+	</body>
+</html>

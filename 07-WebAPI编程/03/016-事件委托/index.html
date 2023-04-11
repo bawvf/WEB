@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>016-事件委托</title>
+	</head>
+	<body>
+		<ul>
+			<li>请勿打扰</li>
+			<li>请勿打扰</li>
+			<li>请勿打扰</li>
+			<li>请勿打扰</li>
+			<li>请勿打扰</li>
+		</ul>
+		
+		<script>
+			// 事件委托原理 给父结点添加侦听器 利用事件冒泡影响每一个子节点
+			var ul = document.querySelector('ul');
+			ul.addEventListener('click', function(e) {
+				// alert('请勿打扰');
+				// e.target  这个可以得到我们点击的对象
+				e.target.style.backgroundColor = 'pink';
+			})
+		</script>
+	</body>
+</html>
+
+
+《

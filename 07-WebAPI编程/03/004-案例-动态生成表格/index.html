@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>004-案例-动态生成表格</title>
+		<style>
+		    table {
+		        width: 500px;
+	            margin: 100px auto;
+	            border-collapse: collapse;
+	            text-align: center;
+	        }    
+		    td,
+	        th {
+	            border: 1px solid #333;
+	        }    
+		    thead tr {
+	            height: 40px;
+	            background-color: #ccc;
+	        }
+		</style>
+	</head>
+	<body>
+		<table cellspacing="0">
+		    <thead>
+	            <tr>
+	                <th>姓名</th>
+		            <th>科目</th>
+	                <th>成绩</th>
+	                <th>操作</th>
+	            </tr>
+	        </thead>
+			<tbody>
+					
+			</tbody>
+		</table>
+		
+		<script>
+			// 1.先去准备好学生的数据
+			var datas = [{
+				name: '魏璎珞',
+				subject: 'JavaScript',
+				score: 100
+			},
+			{
+				name: '一二',
+				subject: 'JavaScript',
+				score: 98
+			},
+			{
+				name: '三四',
+				subject: 'JavaScript',
+				score: 99
+			},
+			{
+				name: '物流',
+				subject: 'JavaScript',
+				score: 99
+			}];
+			// 2.往tbody里面创建行 有几个人（数组长度）就创建几行
+			var tbody = document.querySelector('tbody');
+			for (var i = 0; i < datas.length; i++) {
+				// 创建tr行
+				var tr = document.createElement('tr');
+				tbody.appendChild(tr);
+				
+				// 行里面创建单元格 td 单元格数量取决于每个对象里面的个数
+				for (var k in datas[i]) {    //管理列
+					var td = document.createElement('td');
+					td.innerHTML = datas[i][k];
+					tr.appendChild(td);
+				}	
+				
+				// 3.创建有删除2个字的单元格
+				var td = document.createElement('td');
+				td.innerHTML = '<a href="javascrit:;">删除</a>';
+				tr.appendChild(td);
+			}
+			// 4.删除操作 开始
+			var as = document.querySelectorAll('a');
+			for (var i = 0; i < as.length; i++) {
+				as[i].onclick = function() {
+					tbody.removeChild(this.parentNode.parentNode)
+				}
+			}
+			
+		</script>
+	</body>
+</html>

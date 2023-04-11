@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>018-鼠标事件对象</title>
+		<style>
+			body {
+				height: 3000px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// 鼠标事件对象
+			document/addEventListener('click', function(e) {
+				// 1.client 鼠标在可视区的x和y坐标
+				console.log(e.clientX);
+				console.log(e.clientY);
+				console.log('-------------------------------');
+				
+				// 2.page 鼠标在页面文档的x和y坐标
+				console.log(e.pageX);
+				console.log(e.pageY);
+			})
+		</script>
+	</body>
+</html>
