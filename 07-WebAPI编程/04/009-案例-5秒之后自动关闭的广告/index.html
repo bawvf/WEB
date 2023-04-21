@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>009-案例-5秒之后自动关闭的广告</title>
+	</head>
+	<body>
+		<img class="ad" src="img/ad.jpg"/>
+		
+		<script>
+			var ad = document.querySelector('.ad');
+			setTimeout(function() {
+				ad.style.display = 'none';
+			}, 5000);
+		</script>
+	</body>
+</html>

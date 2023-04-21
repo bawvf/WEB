@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>019-页面跳转</title>
+	</head>
+	<body>
+		<a href="index.html">点击我去首页</a>
+		<button>后退</button>
+		
+		<script>
+			var btn = document.querySelector('button');
+			btn.addEventListener('click', function() {
+				history.back();
+			})
+		</script>
+	</body>
+</html>
