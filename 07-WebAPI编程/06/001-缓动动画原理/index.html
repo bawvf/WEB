@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>001-缓动动画原理</title>
+		<style>
+			div {
+				position: absolute;
+				left: 0;
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+			span {
+				position: absolute;
+				left: 0;
+				top: 200px;
+				display: block;
+				width: 150px;
+				height: 150px;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<span></span>
+		
+		<script>
+			// 简单动画函数封装 obj目标对象 target 目标位置
+			function animate(obj, target) {
+				obj.timer = setInterval(function() {
+					// 步长值写到定时器的里面
+					var step = (target - obj.offsetLeft) / 10;
+					if (obj.offsetLeft >= target) {
+						clearInterval(timer);
+					}
+					// 把每次加1改为一个慢慢变小的值
+					obj.style.left = obj.offsetLeft + step + 'px';
+				}, 15);
+			}
+			
+			var div = document.querySelector('div');
+			var span = document.querySelector('span');
+			
+			// 调用函数
+			animate(div, 400);
+			animate(span, 500); 
+	</body>
+</html>
