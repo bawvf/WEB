@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>002-classList使用</title>
+    <style>
+        .bg {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one two"></div>
+    <button>开关灯</button>
+    <script>
+        // classList返回元素的类名
+        var div = document.querySelector('div');
+        // console.log(div.classList);
+        
+        // 1.添加类名
+        div.classList.add('three');
+        
+        // 2.删除类名
+        div.classList.remove('one');
+        
+        // 3.切换类
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            document.body.classList.toggle('bg');
+        })
+    </script>
+</body>
+</html>

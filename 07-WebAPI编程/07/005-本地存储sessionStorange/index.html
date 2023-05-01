@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>005-本地存储sessionStorange</title>
+</head>
+<body>
+    <input type="tel">
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空所有数据</button>
+
+    <script>
+        var ipt = document.querySelector('input');
+        var set = document.querySelector('.set');
+        set.addEventListener('click', function () {
+            // 当我们点击后 就可以把表单的值存起来
+            var val = ipt.value;
+            sessionStorage.setItem('uname', val);
+        })
+    </script>
+</body>
+</html>
