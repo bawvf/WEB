@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+  <meta charset = "UTF-8" >
+  <title >Text</title >
+  <script src="jquery.min.js"></script>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color: pink;
+      }
+  </style>
+</head >
+<body >
+    <div></div>
+    <script>
+        // 1. DOM原生对象
+        var MyDIv = document.querySelector('div');
+        console.dir(MyDIv);
+        
+        // 2. jQUery 对象
+        $('div');
+        console.dir($('div'));
+    </script>
+</body >
+</html >
