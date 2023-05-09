@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+  <meta charset = "UTF-8" >
+  <title >Title</title >
+  <script src="jquery.min.js"></script>
+</head >
+<body >
+    <a href="www.baidu.com" title="都挺好">123</a>
+    
+    <div index="1">121</div>
+    <span></span>
+
+    <script>
+        $(function () {
+            // element.prop("属性名") 获取属性值
+            console.log($("a").prop("href"));
+            $("a").prop("title", "123");
+            
+            // 2.元素的自定义属性 通过 attr()
+            console.log($("div").attr("index"));
+            
+            // 3.数据缓存 data() 这个里面的数据是存放在元素的内存里面
+            $("span").data("uname", "andy");
+            console.log($("span").data("uname"));
+        })
+    </script>
+</body >
+</html >

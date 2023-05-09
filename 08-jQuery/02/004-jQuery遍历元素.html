@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+    <script src="jquery.min.js"></script>
+</head >
+<body >
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        $(function () {
+            $("div").css("color", "red");
+            
+            // 1. rach() 方法遍历元素
+            $("div").each(function (i, domEle) {
+                console.log(i);
+                $(domEle).css("color", "blue");
+            })
+        })
+    </script>
+</body >
+</html >
