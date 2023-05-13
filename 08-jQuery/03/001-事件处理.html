@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head >
+<body >
+    <div></div>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    
+    <ol></ol>
+
+    <script>
+        $(function () {
+            // 1.单个事件处理
+            // $("div").click(function () {
+            //     $(this).css("background", "purple");
+            // });
+            //
+            // $("div").mouseenter(function () {
+            //     $(this).css("background", "skyblue");
+            // });
+            
+            // 2.事件处理
+            $("div").on({
+                mouseenter: function () {
+                    (this).css("background", "skyblue");
+                },
+                click: function () {
+                    $(this).css("background", "purple");
+                },
+                mouseleave: function () {
+                    $(this).css("background", "greenyellow");
+                }
+            });
+            // 2.事件委托
+            $("ul").on("click", "li", function () {
+            
+            });
+            
+            // 3.动态创建绑定
+            //
+            $("ol").on("click", "li", function () {
+                alert(11);
+            })
+            var li = $("<li>321</li>");
+            $("ol").append(li);
+        })
+    </script>
+</body >
+</html >

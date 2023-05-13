@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("div").on({
+                click: function () {
+                    console.log(123);
+                },
+                onmouseover: function () {
+                    console.log(321);
+                }
+            });
+            
+            $("ul").on("click", "li", function () {
+                alert(11);
+            })
+            
+            // 1.事件解除
+            $("div").off("click");
+            $("ul").off("click", "li");
+            
+            // 2.one 只触发事件一次
+            $("p").one("click", function () {
+                alert(11);
+            })
+        })
+    </script>
+</head >
+<body >
+    <div></div>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <p></p>
+</body >
+</html >
