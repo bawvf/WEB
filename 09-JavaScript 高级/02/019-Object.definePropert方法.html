@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        var obj = {
+            id: 1,
+            pname: '小米',
+            price: 1999
+        };
+        
+        // 1.以前对象添加和修改属性的方式
+        // obj.num = 1000;
+        // obj.price = 99;
+        // console.log(obj);
+        
+        // 2.object.defineProperty
+        Object.defineProperty(obj, 'num', {
+            value: 1000
+        });
+        console.log(obj);
+        
+        Object.defineProperty(obj, 'price', {
+            value: 9.9
+        });
+        console.log(obj);
+    </script>
+</body >
+</html >

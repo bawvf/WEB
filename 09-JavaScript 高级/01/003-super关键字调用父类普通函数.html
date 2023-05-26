@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        // super 关键字调用父类普通函数
+        class Father {
+            say() {
+                return '我我';
+            }
+        }
+        
+        class Son extends Father{
+            say() {
+                console.log('1234');
+                console.log(super.say());
+            }
+        }
+    </script>
+</body >
+</html >

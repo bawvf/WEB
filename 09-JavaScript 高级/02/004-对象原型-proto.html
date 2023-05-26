@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        function Star(uname, age) {
+            this.unamme = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function () {
+            console.log('我会唱歌');
+        }
+        
+        var ldh = new Star('刘德华', 18);
+        var zxy = new Star('张学友', 19);
+    </script>
+</body >
+</html >

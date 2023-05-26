@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        function fn(x, y) {
+            console.log('我想。。。');
+        }
+        
+        var o = {
+            name: 'andy'
+        };
+        
+        // 1.call() 可以调用函数
+        fn.call();
+        
+        // 2.call() 可以改变这个函数的this指向
+        fn.call(o, 1, 2);
+    </script>
+</body >
+</html >
