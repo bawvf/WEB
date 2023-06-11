@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        var car = (function () {
+            var start = 13;  //起步价
+            var total = 0;  //总价
+            return  {
+                price: function (n) {
+                    if (n <= 3) {
+                        total = start;
+                    } else {
+                        total = start + (n - 3) * 5;
+                    }
+                    return total;
+                },  //正常的总价
+                yd: function (flag) {
+                    return flag ? total + 10 : total;
+                }  //拥堵后的费用
+            }
+        })();
+        car.price(5);
+    </script>
+</body >
+</html >

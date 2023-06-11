@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        // 有一系列字符可以选择 只要匹配一个就可以
+        var rg = /[abc]/; //只要包含abc其中一个就为true
+        console.log(rg.test('andy'));
+        console.log(rg.test('baby'));
+        console.log(rg.test('color'));
+        console.log(rg.test('red'));
+        
+        var rg1 = /^[abc]$/;  //三选一，只有是其中一个才返回true
+        console.log(rg1.test('aa'));
+        console.log(rg1.test('a'));
+        console.log(rg1.test('b'));
+        console.log(rg1.test('c'));
+        console.log(rg1.test('abc'));
+        
+        var rg2 = /^[a-z]$/;  //只有是26个 其中一个才返回true
+        console.log(rg2.test('a'));
+        console.log(rg2.test('z'));
+        console.log(rg2.test(1));
+        console.log(rg2.test('A'));
+        // 字符组合
+        var reg = /^[a-zA-Z]$/;只有是26个 其中一个(包括大小写)才返回true
+
+        // 如果[]里面有^表示取反的意思
+        var reg1 = /^[^a-zA-Z0-9_-]$/;
+    </script>
+</body >
+</html >

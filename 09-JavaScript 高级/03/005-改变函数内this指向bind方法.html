@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+
+    <script>
+        var o = {
+            name: 'andy'
+        };
+        
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+        };
+        fn.bind(o);
+        
+        var f = fn.bind(o, 1, 2);
+        f();
+        
+        // 1.不会调用原来的函数 可以改变原来函数内部的this指向
+        // 2.返回的是原函数改变this之后产生的新函数
+        
+        // var btn = document.querySelector('button');
+        // btn.onclick = function () {
+        //     this.disabled = true;
+        //     setTimeout(function () {
+        //
+        //     }.bind(btn), 3000)
+        // }
+        
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                this.disabled = true;
+                setTimeout(function () {
+                
+                }.bind(this), 2000)
+            }
+        }
+    </script>
+</body >
+</html >

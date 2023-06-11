@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+<ul class="nav">
+    <li>榴莲</li>
+    <li>其他</li>
+    <li>三四</li>
+    <li>物流</li>
+</ul>
+    
+    <script>
+        var lis = document.querySelector('.nav').querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            (function (i) {
+                setTimeout(function () {
+                    console.log(lis[i].innerHTML);
+                }, 3000)
+            })(i);
+        }
+    </script>
+</body >
+</html >

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        var o = {
+            name: 'andy'
+        };
+        
+        function fn(arr) {
+            console.log(this);
+            console.log(arr);
+        };
+        fn.apply(o, ['pink']);
+        
+        // 1.调用函数，改变this指向
+        // 2.参数必须是数组（伪数组）
+    </script>
+</body >
+</html >

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        var reg = /^a$/;
+        
+        // 表示可以出现0次或者多次
+        var reg = /^a*$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+        
+        // 表示可以出现1次或者多次
+        var reg = /^a+$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+        
+        // 表示可以出现1次或者0次
+        var reg = /^a?$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+        
+        // 表示重复出现3次
+        var reg = /^a{3}$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+        
+        // 表示重复出现3次及以上
+        var reg = /^a{3,}$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+        
+        // 表示重复出现3-16次
+        var reg = /^a{3,16}$/;
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aaaa'));
+    </script>
+</body >
+</html >

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        // 1.call()
+        var o = {
+            name: 'andy'
+        }
+        
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+        };
+        fn.call(o, 1, 2);
+        
+        function Father(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+        }
+        
+        function Son() {
+            Father.call(this, uname, age, sex);
+        }
+        
+        var son = new Son('123', 18, '男');
+    </script>
+</body >
+</html >

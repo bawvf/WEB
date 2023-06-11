@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+    <script>
+        // 箭头函数是由来简化函数定义语法
+        // const fn =() => {
+        //     console.log(123);
+        // }
+        // fn();
+        
+        // 在箭头函数中 如果函数体中只有一行代码 并且代码的执行结果就是函数的返回值 函数体大括号可以省略
+        const sum = (n1, n2) => n1 + n2;
+        
+        const result = sum(10, 20);
+        console.log(result);
+        
+        // 在箭头函数中 如果形参只有一个 形参外侧的小括号也是可以省略的
+        const fn = (v) => {
+            alert(v);
+        }
+        fn(2);
+        
+        // 箭头函数不绑定this 箭头函数没有自己的this关键字 如果使用则指向函数定义位置中的this
+        
+        function fn1() {
+            console.log(this);
+            return () => {
+                console.log(this);
+            }
+        }
+        
+        const obj = {name: 'zhangsan'};
+        
+        const resFn = fn1.call(obj);
+        resFn();
+        // fn1();
+        
+    </script>
+</body >
+</html >

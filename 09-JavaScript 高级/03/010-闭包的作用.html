@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <title >Title</title >
+</head >
+<body >
+<script>
+    function fn() {
+        var num = 10;
+        function fun() {
+            console.log(num);
+        }
+        return fun;
+    }
+    var f = fn();
+    
+    // 类似于
+    // var f = function fun() {
+    //     console.log(num);
+    // }
+</script>
+</body >
+</html >
